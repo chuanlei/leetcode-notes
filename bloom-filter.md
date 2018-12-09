@@ -25,7 +25,16 @@
 
 ### false positive
 即不在初始集合，但是“不小心”通过了过滤器。我们要分析的就是false positive的概率。
+![analysis of bloom filter](https://github.com/chuanlei/leetcode-notes/blob/master/pics/darts-at-targets.jpg)
 
+在布隆过滤器的场景中，x=n, y=km
+
+我们希望0的比例尽量大。
+
+如果k=n/m或者更小，那么零的比例为1/e（即37%）
+
+在一般意义上,false positive的概率为
+![false-positive formula](https://github.com/chuanlei/leetcode-notes/blob/master/pics/false-positive.jpg)
 
 
 ## 总结
