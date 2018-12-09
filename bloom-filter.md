@@ -36,6 +36,5 @@
 在一般意义上,false positive的概率为
 ![false-positive formula](https://github.com/chuanlei/leetcode-notes/blob/master/pics/false-positive.jpg)
 
-
 ## 总结
 布隆过滤器提供了一种白名单机制，也可以认为是一种注册机制。只有在初识集合中的元素才能通过这个filter
