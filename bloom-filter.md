@@ -17,3 +17,16 @@
 
 ## 布隆过滤器的原理
 构成如下
+![construction of bloom filter](https://github.com/chuanlei/leetcode-notes/blob/master/pics/construction-of-bf.jpg)
+
+新来的元素经过k次哈希函数的计算，如果有某一位为0，那么必然不能通过。
+
+## 性能分析
+
+### false positive
+即不在初始集合，但是“不小心”通过了过滤器。我们要分析的就是false positive的概率。
+
+
+
+## 总结
+布隆过滤器提供了一种白名单机制，也可以认为是一种注册机制。只有在初识集合中的元素才能通过这个filter
