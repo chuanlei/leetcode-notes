@@ -7,7 +7,9 @@
 
 注：我们可以参考guava中`Hashing.consistentHash(long input, int buckets)`方法的使用
 
-![guava-consistent-hashing](https://github.com/chuanlei/leetcode-notes/blob/master/pics/guava-hashing-usage.jpg)
+![guava-consistent-hashing]
+
+(https://github.com/chuanlei/leetcode-notes/blob/master/pics/guava-hashing-usage.jpg)
 
 输出结果为
 ![consistent-hashing output](https://github.com/chuanlei/leetcode-notes/blob/master/pics/consistent-hashing-output.jpg)
