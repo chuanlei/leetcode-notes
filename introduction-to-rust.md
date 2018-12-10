@@ -21,7 +21,7 @@ let res = child.join()
 4. thread::Thread::unparK() 恢复线程
 
 示例
-```
+```rust
 use std::thread;
 use std::time::Duration;
 
@@ -41,7 +41,7 @@ mpsc（即std::sync::mpsc，意为multi-producer, single-consumer FIFO queue）
 
 #### 异步管道
 代码示例
-```
+```rust
 use std::thread;
 use std::sync::mpsc::channel;
 
@@ -62,7 +62,7 @@ while let Ok(r) = rx.recv() {
 ### 同步管道
 同步管道和异步管道在接收端是一样的逻辑，区别在于发送端。
 
-```
+```rust
 use std::thread;
 use std::sync::mpsc::sync_channel;
 
