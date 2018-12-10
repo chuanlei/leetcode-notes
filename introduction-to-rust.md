@@ -5,7 +5,7 @@
 ## 多线程
 
 最简单的使用方式
-```
+```rust
 use std::thread;
 let child = thread::spawn(move || {
   // 逻辑
