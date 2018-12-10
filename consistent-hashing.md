@@ -13,6 +13,8 @@
 
 ![consistent-hashing output](https://github.com/chuanlei/leetcode-notes/blob/master/pics/consistent-hashing-output.jpg)
 
+我们实验表明：在jump-hashing的语境下server的数量可增可见
+
 [groupcache: 客户端、服务端一体的缓存系统](https://github.com/golang/groupcache)
 
 ps: groupcache代码很简洁，值得一读
