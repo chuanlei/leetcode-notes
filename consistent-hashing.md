@@ -3,6 +3,10 @@
 ## 参考资料
 [Consistent Hashing: Algorithmic Tradeoffs](https://medium.com/@dgryski/consistent-hashing-algorithmic-tradeoffs-ef6b8e2fcae8)
 
+[jump hash](https://github.com/chuanlei/leetcode-notes/blob/master/paper/jump-consistent-hashing.pdf)
+
+注：我们可以参考guava中`Hashing.consistentHash(long input, int buckets)`方法的使用
+
 [groupcache: 客户端、服务端一体的缓存系统](https://github.com/golang/groupcache)
 
 ps: groupcache代码很简洁，值得一读
