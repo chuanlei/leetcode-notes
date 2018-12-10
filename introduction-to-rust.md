@@ -37,7 +37,7 @@ t.join();
 ```
 
 ### 管道
-mpsc（即std::sync::mpsc，意为multi-producer, single-consumer FIFO queue）
+mpsc（即`std::sync::mpsc`，意为multi-producer, single-consumer FIFO queue）
 
 #### 异步管道
 代码示例
