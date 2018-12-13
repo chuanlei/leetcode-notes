@@ -40,3 +40,5 @@ citations[index] >= length(citations) - index.
 [21. Merge Two Sorted Lists](https://leetcode.com/problems/merge-two-sorted-lists/)
 
 尾插法性能较低，有什么其他方案吗？
+
+递归倒也是不错的方案(本质上是头插法）
