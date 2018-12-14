@@ -109,6 +109,16 @@ raftNode是应用与raft核心库连接的桥梁。该结构需要处理的内�
 
 ![创建snapshot](https://github.com/chuanlei/tech-notes/blob/master/pics/create-snapshot.jpg)
 
+## rpc
+
+![raft-rpc](https://github.com/chuanlei/tech-notes/blob/master/pics/raft_rpc.jpg)
+
+## 启动流程
+![启动流程](https://github.com/chuanlei/tech-notes/blob/master/pics/node_start.jpg)
+
+而主要的运行逻辑为
+![运行逻辑](https://github.com/chuanlei/tech-notes/blob/master/pics/main_run.jpg)
+
 ## 总结
 
 etcd-raft和应用之间是通过channel进行消息的通信，而消息的结构也是由raft库定义好。具体来说，应用通过raft库提供的Ready()接口获取到消息传输管道，并从该管道接收raft库发出的各种指令(Message)，最后再通过Advance()通知raft库命令处理结果。应用处理指令的典型流程是：
