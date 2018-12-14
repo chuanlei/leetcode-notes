@@ -70,3 +70,22 @@ raftNode是应用与raft核心库连接的桥梁。该结构需要处理的内�
 其中startRaft比较关键，会启动底层一些与raft协议处理相关联的组件
 
 
+**readCommits**逻辑
+
+![readCommits](https://github.com/chuanlei/tech-notes/blob/master/pics/readCommits.jpg)
+
+**http服务函数**
+
+![http api](https://github.com/chuanlei/tech-notes/blob/master/pics/http-api.jpg)
+
+**raftNode**对propose的处理
+
+![proposal_over_raft](https://github.com/chuanlei/tech-notes/blob/master/pics/proposal_over_raft.jpg)
+
+来自`serveChannels`函数
+
+**接收来自raft的返回**
+
+![来自raft的返回](https://github.com/chuanlei/tech-notes/blob/master/pics/raft_return.jpg)
+
+其中`publishEntries`方法将返回推到应用层
