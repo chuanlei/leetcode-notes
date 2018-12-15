@@ -117,6 +117,7 @@ raftNode是应用与raft核心库连接的桥梁。该结构需要处理的内�
 ![启动流程](https://github.com/chuanlei/tech-notes/blob/master/pics/node_start.jpg)
 
 而主要的运行逻辑为
+
 ![运行逻辑](https://github.com/chuanlei/tech-notes/blob/master/pics/main_run.jpg)
 
 ### 选举流程
@@ -127,6 +128,27 @@ raftNode是应用与raft核心库连接的桥梁。该结构需要处理的内�
 
 raft状态机中维护当前的状态和对应的tick函数
 ![tick](https://github.com/chuanlei/tech-notes/blob/master/pics/tick.jpg)
+
+状态机启动的配置为
+
+![状态机配置](https://github.com/chuanlei/tech-notes/blob/master/pics/fsm-config.jpg)
+
+那么`step`回调函数是怎么使用的呢？
+
+**如何将消息发送到其他raft节点**
+
+![发送消息到其他raft节点](https://github.com/chuanlei/tech-notes/blob/master/pics/send.jpg)
+
+这个问题的关键是`Ready`内容是如何构成的？
+
+![newReady](https://github.com/chuanlei/tech-notes/blob/master/pics/newReady.jpg)
+
+由`node`组件调用`newReady`方法。
+
+由外围节点（即我们应用代码）消费`Ready`中的数据并发送出去。
+
+![发送mesg](https://github.com/chuanlei/tech-notes/blob/master/pics/send_msgs.jpg)
+
 
 
 ## 总结
