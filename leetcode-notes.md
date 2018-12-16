@@ -42,3 +42,19 @@ citations[index] >= length(citations) - index.
 尾插法性能较低，有什么其他方案吗？
 
 递归倒也是不错的方案(本质上是头插法）
+
+[7. Reverse Integer](https://leetcode.com/problems/reverse-integer/)
+
+注意整数溢出的问题
+
+[5. Longest Palindromic Substring](https://leetcode.com/problems/longest-palindromic-substring/)
+
+边界情况的处理非常有意思
+
+居然不是使用暴力解法，而是使用动态规划，那就更有意思了
+
+果然有可以复用的子结构
+
+[31. Next Permutation](https://leetcode.com/problems/next-permutation/)
+
+未完待续
