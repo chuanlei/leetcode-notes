@@ -58,3 +58,10 @@ citations[index] >= length(citations) - index.
 [31. Next Permutation](https://leetcode.com/problems/next-permutation/)
 
 未完待续
+
+[221. Maximal Square](https://leetcode.com/problems/maximal-square/)
+
+动态规划
+
+[394. Decode String](https://leetcode.com/problems/decode-string/)
+
