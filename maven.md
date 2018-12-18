@@ -1,6 +1,6 @@
 protobuf插件
 
-```
+```xml
 <plugin>
   <groupId>org.xolstice.maven.plugins</groupId>
   <artifactId>protobuf-maven-plugin</artifactId>
@@ -37,3 +37,8 @@ protobuf插件
   </executions>
 </plugin>
 ```
+
+## 生命周期
+
+![生命周期](https://github.com/chuanlei/tech-notes/blob/master/pics/maven.jpg)
+
