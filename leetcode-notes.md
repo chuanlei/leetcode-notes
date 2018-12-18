@@ -65,3 +65,18 @@ citations[index] >= length(citations) - index.
 
 [394. Decode String](https://leetcode.com/problems/decode-string/)
 
+可以暴力解法，也可以使用stack进行稍微优雅一点的处理
+
+[参考答案](https://leetcode.com/problems/decode-string/discuss/192903/2ms-Java-Solution-with-2-stacks)
+
+[56. Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+[参考答案](https://leetcode.com/problems/merge-intervals/solution/)
+
+[560. Subarray Sum Equals K](https://leetcode.com/problems/subarray-sum-equals-k/)
+
+动态规划并不是最优，还有更好的解决方案（比如使用`hashmap`）
+
+[621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
+
+排序与优先队列的使用
