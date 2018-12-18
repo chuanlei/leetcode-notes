@@ -42,3 +42,7 @@ protobuf插件
 
 ![生命周期](https://github.com/chuanlei/tech-notes/blob/master/pics/maven.jpg)
 
+
+## Reactor Build Order
+
+![reactor-build-order](https://github.com/chuanlei/tech-notes/blob/master/pics/reactor-build-order.jpg)
