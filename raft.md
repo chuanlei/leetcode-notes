@@ -2,7 +2,12 @@
 
 [ratis](https://ratis.incubator.apache.org/#gettingstarted)
 
-视频讲解
+[ratis的分享ppt](https://github.com/chuanlei/tech-notes/blob/master/paper/ratis-ppt.pdf)
+
+## ratis使用小结
+
+
+## 视频讲解
 
 https://www.youtube.com/watch?v=P9Ydif5_qvE
 
