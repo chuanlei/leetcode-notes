@@ -6,6 +6,8 @@
 
 ## ratis使用小结
 
+![启动raft-server](https://github.com/chuanlei/tech-notes/blob/master/pics/start-raft-server.jpg)
+
 
 ## 视频讲解
 
