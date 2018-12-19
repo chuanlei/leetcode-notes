@@ -80,3 +80,9 @@ citations[index] >= length(citations) - index.
 [621. Task Scheduler](https://leetcode.com/problems/task-scheduler/)
 
 排序与优先队列的使用
+
+[3. Longest Substring Without Repeating Characters](https://leetcode.com/problems/longest-substring-without-repeating-characters/)
+
+暴力解法性能底下
+
+采用滑动窗口的处理方案 ```[i, j)```
