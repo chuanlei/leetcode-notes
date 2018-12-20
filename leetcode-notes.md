@@ -87,4 +87,26 @@ citations[index] >= length(citations) - index.
 
 采用滑动窗口的处理方案 ```[i, j)```
 
-要注意对初始化部分
+[93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/)
+
+这道题目非常有意思，重点在于"01"这类ip地址组成部分是不合法的。
+
+[77. Combinations](https://leetcode.com/problems/combinations/description/)
+
+这道题目不同于一般的回溯问题，关键在于不考虑combination中元素的顺序
+
+[39. Combination Sum](https://leetcode.com/problems/combination-sum/description/)
+
+这道题目与上面一样，难点都是在于不考虑combination的顺序
+
+这样就不是常规的dfs了，可能需要修改一下认知模型
+
+这类问题，我们统一的解决方案是：要求后加入prefix的元素必须必prefix中所有元素都要大
+
+[40. Combination Sum II](https://leetcode.com/problems/combination-sum-ii/description/)
+
+与上面不同点，在于candidates里面的元素只能被使用一次（但是允许重复）
+
+### 回溯问题终极总结
+1. prefix本来是有序的，如果我们的combination无序，那么我们将candidates排序即可
+2. 我们一开始处理candiates是unique的，如果可以重复，那么我们必须使用set在同一层过滤
