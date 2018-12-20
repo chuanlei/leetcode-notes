@@ -86,3 +86,5 @@ citations[index] >= length(citations) - index.
 暴力解法性能底下
 
 采用滑动窗口的处理方案 ```[i, j)```
+
+要注意对初始化部分
