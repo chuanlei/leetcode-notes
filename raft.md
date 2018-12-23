@@ -26,6 +26,8 @@
 4. 如果发现`CommittedEntries`中有成员变更类型的entry，调用node的`ApplyConfChange()`方法让node知道(这里和raft论文不一样，论文中只要节点收到了成员变更日志就应用)
 5. 调用`Node.Advance()`告诉raft node，这批状态更新处理完了，状态已经演进了，可以给我下一批Ready让我处理。
 
+![raft-ready-processing](https://github.com/chuanlei/tech-notes/blob/master/pics/raft-ready.jpg)
+
 ## ratis使用小结
 
 ![启动raft-server](https://github.com/chuanlei/tech-notes/blob/master/pics/start-raft-server.jpg)
