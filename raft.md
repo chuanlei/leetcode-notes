@@ -4,6 +4,28 @@
 
 [ratis的分享ppt](https://github.com/chuanlei/tech-notes/blob/master/paper/ratis-ppt.pdf)
 
+[TiKV 源码解析系列 - 如何使用 Raft](https://pingcap.com/blog-cn/tikv-how-to-use-raft/)
+
+[etcd raft库的使用](https://zhuanlan.zhihu.com/p/27767675)
+
+1. 实现`Storage`接口,etcd自带了`MemoryStorage`：和etcd的wal和snap包做持久化，重启的时候从wal和snap中获取日志恢复MemoryStorage
+2. 对`Ready`的处理
+
+这个Ready结构体封装了一批更新，这些更新包括：
+
+1. `pb.HardState`: 包含当前节点见过的最大的term，以及在这个term给谁投过票，已经当前节点知道的commit index
+2. `Messages`: 需要广播给所有peers的消息
+3. `CommittedEntries`:已经commit了，还没有apply到状态机的日志
+4. `Snapshot`:需要持久化的快照
+
+应用需要对Ready的处理包括:
+
+1. 将`HardState`, `Entries`, `Snapshot`持久化到storage。
+2. 将`Messages`(上文提到的msgs)非阻塞的广播给其他peers
+3. 将`CommittedEntries`(已经commit还没有apply)应用到状态机。
+4. 如果发现`CommittedEntries`中有成员变更类型的entry，调用node的`ApplyConfChange()`方法让node知道(这里和raft论文不一样，论文中只要节点收到了成员变更日志就应用)
+5. 调用`Node.Advance()`告诉raft node，这批状态更新处理完了，状态已经演进了，可以给我下一批Ready让我处理。
+
 ## ratis使用小结
 
 ![启动raft-server](https://github.com/chuanlei/tech-notes/blob/master/pics/start-raft-server.jpg)
