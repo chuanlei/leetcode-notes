@@ -110,3 +110,9 @@ citations[index] >= length(citations) - index.
 ### 回溯问题终极总结
 1. prefix本来是有序的，如果我们的combination无序，那么我们将candidates排序即可
 2. 我们一开始处理candiates是unique的，如果可以重复，那么我们必须使用set在同一层过滤
+
+[146. LRU Cache](https://leetcode.com/problems/lru-cache/)
+
+LRU的设计与实现：主要难点在于`key->ts`的存储与更新
+
+
