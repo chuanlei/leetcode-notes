@@ -149,6 +149,10 @@ LRU的设计与实现：主要难点在于`key->ts`的存储与更新
 
 ## binary indexed tree
 
+partial sum in each node
+
+题目：307、315
+
 ## 二分查找
 [162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
 
