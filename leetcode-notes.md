@@ -117,6 +117,26 @@ LRU的设计与实现：主要难点在于`key->ts`的存储与更新
 
 [4. Median of Two Sorted Arrays](https://leetcode.com/problems/median-of-two-sorted-arrays/)
 
+动态规划
 
+![dp](https://github.com/chuanlei/tech-notes/blob/master/pics/dp.jpg)
 
+70, 62（简单题）
 
+926, 845(从右往左、从左往右，然后再合并）
+
+801，926,790,818（dp[i][0], dp[i][1], 第二维是常数维）
+
+经典题总结
+
+![dp-all](https://github.com/chuanlei/tech-notes/blob/master/pics/dp-all.jpg)
+
+0-1背包问题
+
+![0-1背包问题](https://github.com/chuanlei/tech-notes/blob/master/pics/0-1-knapsack.jpg)
+
+![背包问题解法](https://github.com/chuanlei/tech-notes/blob/master/pics/knapsack-solution.jpg)
+
+两种背包问题的扩展
+1. 完全背包
+2. 多重背包
