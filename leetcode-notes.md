@@ -137,6 +137,8 @@ LRU的设计与实现：主要难点在于`key->ts`的存储与更新
 
 ![背包问题解法](https://github.com/chuanlei/tech-notes/blob/master/pics/knapsack-solution.jpg)
 
+![背包问题dp解法](https://github.com/chuanlei/tech-notes/blob/master/pics/dp-solution-2.jpg)
+
 两种背包问题的扩展
 1. 完全背包
 2. 多重背包
