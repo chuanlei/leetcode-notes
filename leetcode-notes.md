@@ -131,6 +131,10 @@ LRU的设计与实现：主要难点在于`key->ts`的存储与更新
 
 ![dp-all](https://github.com/chuanlei/tech-notes/blob/master/pics/dp-all.jpg)
 
+[91. Decode Ways](https://leetcode.com/problems/decode-ways/)
+
+关键在于对0的处理
+
 0-1背包问题
 
 ![0-1背包问题](https://github.com/chuanlei/tech-notes/blob/master/pics/0-1-knapsack.jpg)
