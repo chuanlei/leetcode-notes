@@ -148,3 +148,9 @@ LRU的设计与实现：主要难点在于`key->ts`的存储与更新
 2. 多重背包
 
 ## binary indexed tree
+
+## 二分查找
+[162. Find Peak Element](https://leetcode.com/problems/find-peak-element/)
+
+难点在于对于时间复杂度的要求, `log(n)`
+
