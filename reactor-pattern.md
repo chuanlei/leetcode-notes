@@ -170,14 +170,16 @@ val responseQueue = new LinkedBlockingDeque[RequestChannel.Response]()
   key.attach(channel);
 ```
 
+
+
+`processNewResponses()`的逻辑为：处理`responseQueue`中的元素(即`handler`返回的数据)，此处加上对`Writable`事件的关注。
+
 `poll()`对应的逻辑为
 
-1. stagedReceives(读)
+1. stagedReceives(读) -> completedReceives
 2. completedSends(写)
 
-`processNewResponses()`的逻辑为：处理`responseQueue`中的元素
-
-`processCompletedReceives()`的逻辑为 ：将completedReceives的元素取出放入`RequestChannel`
+`processCompletedReceives()`的逻辑为 ：将`completedReceives`的元素取出放入`RequestChannel`
 
 `processCompletedSends()`的逻辑为：将`processCompletedSends`中的元素取出放入
 
@@ -186,6 +188,10 @@ val responseQueue = new LinkedBlockingDeque[RequestChannel.Response]()
 `handle()`函数
 
 ### KafkaRequestHandlerPool
+
+![创建handler pool](https://github.com/chuanlei/tech-notes/blob/master/pics/kafka-handler-thread-pool.jpg)
+
+![往回发送数据](https://github.com/chuanlei/tech-notes/blob/master/pics/sendResponse-to-processor.jpg)
 
 
 ## 对应到hadoop rpc
