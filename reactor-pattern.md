@@ -170,18 +170,43 @@ val responseQueue = new LinkedBlockingDeque[RequestChannel.Response]()
   key.attach(channel);
 ```
 
+而`KafkaChannel`的主要成员变量为
+
+![kafkachannel成员变量](https://github.com/chuanlei/tech-notes/blob/master/pics/kafkaChannel-members.jpg)
+
+而`TransportLayer`可以认为是`SelectionKey`和`SocketChannel`的封装
+
 
 
 `processNewResponses()`的逻辑为：处理`responseQueue`中的元素(即`handler`返回的数据)，此处加上对`Writable`事件的关注。
 
+![将send注册到selector](https://github.com/chuanlei/tech-notes/blob/master/pics/send-selector.jpg)
+
 `poll()`对应的逻辑为
+
+```scala
+NetworkReceive networkReceive = channel.read();
+Send send = channel.write();
+
+private long receive(NetworkReceive receive) throws IOException {
+    return receive.readFrom(transportLayer);
+}
+
+private boolean send(Send send) throws IOException {
+    send.writeTo(transportLayer);
+    if (send.completed())
+        transportLayer.removeInterestOps(SelectionKey.OP_WRITE);
+
+    return send.completed();
+}
+```
 
 1. stagedReceives(读) -> completedReceives
 2. completedSends(写)
 
 `processCompletedReceives()`的逻辑为 ：将`completedReceives`的元素取出放入`RequestChannel`
 
-`processCompletedSends()`的逻辑为：将`processCompletedSends`中的元素取出放入
+`processCompletedSends()`的逻辑为：将`processCompletedSends`中的元素取出
 
 ### KafkaApis
 
