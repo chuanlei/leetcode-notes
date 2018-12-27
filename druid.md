@@ -33,6 +33,21 @@
 
 ## 数据格式
 
+timestamp与metric都是array of int of floating point (LZ4压缩)
+
+dimension要稍微复杂一点，由以下三种数据结构构成
+
+1. A dictionary that maps values (which are always treated as strings) to integer IDs,
+2. A list of the column’s values, encoded using the dictionary in 1, and
+3. For each distinct value in the column, a bitmap that indicates which rows contain that value. (也被称为倒排)
+
+### 示例
+
+![druid-example](https://github.com/chuanlei/tech-notes/blob/master/pics/druid-example.png)
+
+
+![dimension的格式](https://github.com/chuanlei/tech-notes/blob/master/pics/druid-dimension-data-structure.jpg)
+
 ### 倒排
 
 字符串类型的倒排索引
