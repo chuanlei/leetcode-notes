@@ -170,6 +170,23 @@ val responseQueue = new LinkedBlockingDeque[RequestChannel.Response]()
   key.attach(channel);
 ```
 
+`poll()`对应的逻辑为
+
+1. stagedReceives(读)
+2. completedSends(写)
+
+`processNewResponses()`的逻辑为：处理`responseQueue`中的元素
+
+`processCompletedReceives()`的逻辑为 ：将completedReceives的元素取出放入`RequestChannel`
+
+`processCompletedSends()`的逻辑为：将`processCompletedSends`中的元素取出放入
+
+### KafkaApis
+
+`handle()`函数
+
+### KafkaRequestHandlerPool
+
 
 ## 对应到hadoop rpc
 1. `Call`对象
